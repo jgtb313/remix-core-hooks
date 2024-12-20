@@ -53,7 +53,6 @@
     "@testing-library/react": "^16.0.0",
     "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/user-event": "^14.5.2",
-    "@types/": "testing-library/user-event",
     "@types/lodash.isstring": "^4.0.9",
     "@types/lodash.isundefined": "^3.0.9",
     "@types/lodash.set": "^4.3.9",

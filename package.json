@@ -1,0 +1,78 @@
+{
+  "name": "remix-core-hooks",
+  "version": "1.0.0",
+  "author": "João <jgtb313@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "test": "vitest run",
+    "test:ui": "vitest --ui --coverage",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest --watch --coverage",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
+  },
+  "peerDependencies": {
+    "@remix-run/node": "^2.8.1",
+    "@remix-run/react": "^2.8.1",
+    "@remix-run/serve": "^2.8.1",
+    "react": "^18.2.20",
+    "react-dom": "^18.2.20"
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.8.1",
+    "@remix-run/react": "^2.8.1",
+    "@remix-run/serve": "^2.8.1",
+    "lodash.isstring": "^4.0.1",
+    "lodash.isundefined": "^3.0.1",
+    "lodash.set": "^4.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "5.6.3",
+    "vite": "^5.3.5",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "main": "dist/remix-core-hooks.umd.js",
+  "module": "dist/remix-core-hooks.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/remix-core-hooks.umd.js",
+      "import": "./dist/remix-core-hooks.es.js"
+    }
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/": "testing-library/user-event",
+    "@types/lodash.isstring": "^4.0.9",
+    "@types/lodash.isundefined": "^3.0.9",
+    "@types/lodash.set": "^4.3.9",
+    "@types/node": "^20",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^2.1.4",
+    "@vitest/ui": "^2.1.4",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-promise": "^7.1.0",
+    "init": "^0.1.2",
+    "jsdom": "^24.1.1",
+    "prettier": "^3.3.3",
+    "vitest": "^2.1.4"
+  }
+}

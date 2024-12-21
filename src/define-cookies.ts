@@ -1,7 +1,12 @@
 export const defineCookies = <T>(value: string) => {
   return value.split(';').reduce<T>((result, cookieItem) => {
-    const [key, value] = cookieItem.split('=')
+    const [key, ...rest] = cookieItem.trim().split('=')
 
-    return { ...result, [key.trim()]: value }
+    if (key && rest.length) {
+      const cookieValue = rest.join('=').trim()
+      return { ...result, [key.trim()]: cookieValue }
+    }
+
+    return result
   }, {} as T)
 }

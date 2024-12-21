@@ -20,13 +20,13 @@ const isEmptyString = (value: unknown) => isString(value) && !value
 
 const queryParamsToObject = <T>(search: string) => {
   const params = new URLSearchParams(search)
-  const obj = {} as T
+  const obj = {}
 
   for (const [key, value] of params.entries()) {
-    set(obj as object, key, setupQueryParamsValue(value))
+    set(obj, key, setupQueryParamsValue(value))
   }
 
-  return obj
+  return obj as T
 }
 
 export const useRouter = <T = unknown, K = unknown>() => {
@@ -80,7 +80,7 @@ export const useRouter = <T = unknown, K = unknown>() => {
 
   return {
     pathname: location.pathname,
-    search: location.search,
+    search: locationSearch,
     path: `${location.pathname}${locationSearch}`,
     query: queryParamsToObject<T>(locationSearch),
     params: params as K,
